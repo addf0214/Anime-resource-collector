@@ -2,21 +2,20 @@ name: Routine Update
 
 on:
   schedule:
-    - cron: '00 20 * * *'
+    - cron: "00 20 * * *"
 
 jobs:
   routine-update:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v1
-    - run: npm install
-    - run: node auto.js
-    - run: |
-        git config --global user.name 'Xiong Jie'
-        git config --global user.name 'slayerxj_reg@outlook.com'
-        git commit -a -m "auto: routine update"
-        git push
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+      - run: npm install
+      - run: node auto.js
+      - run: |
+          git config --global user.name 'addf0214'
+          git config --global user.name 'addf0214@outlook.com'
+          git commit -a -m "auto: routine update"
+          git push

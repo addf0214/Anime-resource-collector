@@ -57,11 +57,7 @@ var insertLogic = function (database, items) {
 
   var isVisitedPage = items.length !== 0 && pageContainExistedItem;
 
-  if (isVisitedPage) {
-    return true;
-  } else {
-    return false;
-  }
+  return isVisitedPage;
 };
 
 var parseDetailPage = function (item, responseText) {
@@ -134,7 +130,6 @@ var fetchNew = function (database, fetchNewfinish) {
 };
 
 module.exports = {
-  // TODO: Auto fetch
   lastPageNumber: 600,
   numberOfConcurrency: 1,
   fetchNew,
