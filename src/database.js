@@ -42,9 +42,7 @@ class Database {
     }
   }
   rank() {
-    var unrankedItems = this.content.filter(function (item) {
-      return item.isUnranked();
-    });
+    var unrankedItems = this.content.filter((item) => item.isUnranked());
     rank(unrankedItems);
     this.content.sort(Item.sort);
     return this;
@@ -68,8 +66,8 @@ class Database {
   updateRecord() {
     // Record is maintained in Database Class, should split out
     this.setLatest();
-    fs.writeFile("result.json", JSON.stringify(this.content), () => { });
-    fs.writeFile("latest.json", JSON.stringify(this.latest), () => { });
+    fs.writeFile("result.json", JSON.stringify(this.content), () => {});
+    fs.writeFile("latest.json", JSON.stringify(this.latest), () => {});
     return this;
   }
 }

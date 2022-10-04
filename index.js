@@ -15,14 +15,14 @@ const sorter = (a, b) =>
 const generateTableContent = (items) => {
   const table = document.getElementById("mainView");
   table.innerHTML =
-    "<tr><th>Time</th><th>Title</th><th>Rank</th></tr>" +
+    "<tr><th>Time</th><th>Title</th></tr>" +
     items
-      .map((cur) => {
-        return `<tr><td>${convertToTimeString(
-          new Date(cur.publishTime)
-        )}</td><td><a href='${cur.magnetLink}'>${cur.name}</a></td><td>${stars[cur.generalRanking]
-          }</td></tr>`;
-      })
+      .map(
+        (cur) =>
+          `<tr><td>${convertToTimeString(
+            new Date(cur.publishTime)
+          )}</td><td><a href='${cur.magnetLink}'>${cur.name}</a></td></tr>`
+      )
       .join("");
 };
 
