@@ -1,4 +1,4 @@
-var formatAliases = ["Lilith-Raws"];
+var formatAliases = ["Lilith-Raws", "[ANi]"];
 var excluding = ["WEBDL"];
 var completeAliases = ["完", "合集", "全"];
 var subtitleProviders = [
