@@ -21,7 +21,7 @@ const generateTableContent = (items) => {
         (cur) =>
           `<tr><td>${convertToTimeString(
             new Date(cur.publishTime)
-          )}</td><td><a href='${cur.magnetLink}'>${cur.name}</a></td></tr>`
+          )}</td><td><a href='${cur.magnetLink}'>${cur.name.replace("[ANi]", "")}</a></td></tr>`
       )
       .join("");
 };
